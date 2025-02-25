@@ -117,7 +117,7 @@
 .semicolumn.black{
     width: 50%;
     flex-direction: column;
-    height: 92.6%;
+    height: 92.7%;
     border-left: 2px solid rgb(0, 0, 0);
     border-bottom: 2px solid black;
     border-bottom-left-radius: 10px;
@@ -126,7 +126,7 @@
 .semicolumn.red{
     width: 50%;
     flex-direction: column;
-    height: 92.6%;
+    height: 92.7%;
     border-left: 2px solid rgb(209, 47, 19);
     border-bottom: 2px solid rgb(209, 47, 19);
     border-bottom-left-radius: 10px;

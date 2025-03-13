@@ -1,6 +1,3 @@
-.body{
-    margin:0 auto;
-}
 
 .board{
     box-sizing: border-box;
@@ -10,14 +7,14 @@
     padding: 2%;
     background-color: rgb(39, 55, 30);  
     width:100%;
+    height: 150vh;
     font-size: larger;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
 .board > *{
-    width:80%;
-    margin:2.5%;
+    width:100%;
 }
 
 .board *{
@@ -43,7 +40,7 @@
     max-height: 230px;
     border: 0.5px solid transparent;
     border-radius: 10px;
-    background-image: url('img sources/card-front-design.png');
+    background-image: url('../img sources/card-front-design.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,15 +48,14 @@
 
 
 
-.backgroundcard{
-    margin: 0.2%;
+.background{
     width: 150px;
     max-width: 150px;
     height: 230px;
     max-height: 230px;
     border: 0.5px solid lightgray;
     border-radius: 10px;
-    background-image: url('img sources/card-background-design.jpg');
+    background-image: url('../img sources/card-background-design.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -117,7 +113,7 @@
 .semicolumn.black{
     width: 50%;
     flex-direction: column;
-    height: 92.7%;
+    height: 92.6%;
     border-left: 2px solid rgb(0, 0, 0);
     border-bottom: 2px solid black;
     border-bottom-left-radius: 10px;
@@ -126,7 +122,7 @@
 .semicolumn.red{
     width: 50%;
     flex-direction: column;
-    height: 92.7%;
+    height: 92.6%;
     border-left: 2px solid rgb(209, 47, 19);
     border-bottom: 2px solid rgb(209, 47, 19);
     border-bottom-left-radius: 10px;

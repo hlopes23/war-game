@@ -1,3 +1,5 @@
+
+// CREATE DECK ()
     const generateDeck = () => {
       const suits = ["hearts", "diamonds", "spades", "clubs"];
 
@@ -30,6 +32,8 @@
 
     deck = generateDeck();
 
+
+    // SHUFFLE DECK ()
     const shuffleDeck = (deck) => {
       for (let i = deck.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -38,6 +42,7 @@
       return deck;
     };
 
+    // DEAL CARDS ()
     const dealCards = () => {
       shuffleDeck(deck);
       const half = Math.floor(deck.length / 2);
@@ -49,6 +54,8 @@
 
     let { deck1, deck2 } = dealCards();
 
+
+    // PLAY ()
     const play = (deck1, deck2) => {
       let card1 = deck1.shift();
       let card2 = deck2.shift();
@@ -84,12 +91,16 @@
       console.log(deck1, deck2);
     };
 
+
+    // DEAL CARDS BUTTON
     document.querySelector(".deal").addEventListener("click", () => {
       const { deck1, deck2 } = dealCards();
       document.querySelector(".play").disabled = false;
       console.log(deck1, deck2);
     });
 
+
+    // PLAY BUTTON
     document.querySelector(".play").addEventListener("click", () => {
       while (deck1.length !== 0 && deck2.length !== 0) {
         play(deck1, deck2);

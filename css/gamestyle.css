@@ -23,7 +23,7 @@ height: 70vh;
   justify-content: space-evenly;
   padding: 2%;
   width:100%;
-  height: 60%;
+  height: 50%;
   color: var(--text-color);
 }
 
@@ -52,7 +52,7 @@ font-size: 100px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: 100;
-    gap: 3%;
+    gap: 6%;
 }
 
 
@@ -174,11 +174,11 @@ right: 46.5%;
 }
 
 #card-one, #card-two{
+  display: flex;
   height: 230px;
   width: 150px;
   border: 0.1px solid lightgray;
   border-radius: 10px;
-  background-color: rgba(50, 100, 100, 0.1);
 }
 
 

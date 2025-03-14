@@ -1,17 +1,14 @@
 @import url(/css/style.css);
 
+
 :root{
     --text-color: rgb(195, 210, 167);
+    --background-color:rgb(39, 55, 30);  
 }
 
-.war{
-border: 1px solid rgb(170, 171, 145);
-flex-basis: 50%;
-align-items: center;
-justify-content: center;
-height: 10%;
-font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-font-size: 100px;
+body{
+background-color: var(--background-color);
+height: 70vh;
 }
 
 .audio{
@@ -19,22 +16,83 @@ font-size: 100px;
 }
 
 
+.menu{
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 2%;
+  width:100%;
+  height: 60%;
+  color: var(--text-color);
+}
+
+.menu > *{
+  display: flex;
+}
+
+
+.war{
+text-shadow: 17px 5px 9px rgb(8, 8, 8);;
+flex-basis: 50%;
+align-items: center;
+justify-content: center;
+height: 50%;
+font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+font-size: 100px;
+}
+
+
 .buttons{
     flex-basis: 20%;
     flex-flow: column wrap;
-    height: 21%;
+    height: 100%;
     align-items: center;
     justify-content: flex-start;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: 100;
-    gap: 2.5%
+    gap: 3%;
 }
 
 
+.btn-group .button {
+  background-color: transparent;
+  border: 1px solid rgb(170, 171, 145);
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 21px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+
+.btn-group .button:hover {
+  background-color:rgb(170, 171, 145);
+}
+
+.btn-group {
+  transform: translateX(12px);
+}
+
+.btn-group .button:disabled {
+  cursor: not-allowed;  
+  opacity: 0.3; 
+  background-color: #333; 
+  color: grey;
+  border-color: grey;
+  pointer-events: none; 
+}
+
+
+
 .background{
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 230px;
     border: 0.5px solid lightgray;
     border-radius: 10px;
     background-image: url('../img sources/card-background-design.jpg');
@@ -49,61 +107,79 @@ font-size: 100px;
 .background:nth-child(4) { transform:  translateX(5px); }
 .background:nth-child(5) { transform:  translateX(0px);}
 
+
 .card-stack{
     position: relative;
     height: 230px;
     width: 150px;
 }
 
-.board2{
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    padding: 2%;
-    background-color: rgb(39, 55, 30);  
-    width:100%;
-    height: 150vh;
-    color: var(--text-color);
+
+.playground{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
 }
 
-.board2 > *{
-    display: flex;
+.playground > * {
+  border: 0.5px solid lightgoldenrodyellow;
+  display: flex;
+}
+
+.player1, .player2 {
+  flex-basis: 30%;
+}
+
+.table{
+  flex-basis: 25%;
+  flex-flow: row wrap;
+}
+
+.temp{
+flex-basis: 100%;
+height: 30%;
+padding: 3%;
+
+}
+
+#temp-stack{
+height: 230px;
+width: 150px;
+border: 0.5px solid lightgray;
+background-image: url('../img sources/card-background-design.jpg');
+background-size: cover;
+background-position: center;
+border-radius: 10px;
+position: absolute;
+right: 46.5%;
+}
+
+#temp-stack:nth-child(1) { transform:  translateX(40px) translateY(0px) rotate(-8deg);}
+#temp-stack:nth-child(2) { transform:  translateX(35px) translateY(0px) rotate(10deg);}
+#temp-stack:nth-child(3) { transform:  translateX(0px) translateY(0px) rotate(0deg);}
+#temp-stack:nth-child(4) { transform:  translateX(15px) translateY(0px) rotate(0deg);}
+#temp-stack:nth-child(5) { transform:  translateX(-30px) translateY(0px) rotate(8deg);}
+#temp-stack:nth-child(6) { transform:  translateX(-40px) translateY(0px) rotate(-5deg);}
+
+
+.plays{
+  display: flex;
+  flex-basis: 100%;
+  height: 50%;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+
+#card-one, #card-two{
+  height: 230px;
+  width: 150px;
+  border: 0.1px solid lightgray;
+  border-radius: 10px;
+  background-color: rgba(50, 100, 100, 0.1);
 }
 
 
-.btn-group .button {
-    background-color: transparent;
-    border: 1px solid rgb(170, 171, 145);
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 21px;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-  }
-  
-  /*.btn-group .button:not(:last-child) {
-    border-bottom: none; 
-  }*/
 
-  
-  .btn-group .button:hover {
-    background-color:rgb(170, 171, 145);
-  }
-
-  .btn-group {
-    transform: translateX(12px);
-  }
-
-  .btn-group .button:disabled {
-    cursor: not-allowed;  /* Impede que pareça clicável */
-    opacity: 0.3;  /* Dá um efeito visual de "desativado" */
-    background-color: #333; /* Ou qualquer cor que indique desativação */
-    color: grey;
-    border-color: grey;
-    pointer-events: none; /* Garante que não pode ser clicado */
-}

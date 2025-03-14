@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/gamestyle.css" />
-    <script src="./js/main.js" defer></script> 
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="./js/main.js" defer></script>
 
     <title>War Game</title>
   </head>
   <body>
-    <section class="board2">
-      <div class="war">WAR GAME</div>
-      <div class="buttons">
+    <section class="menu">
+      <article class="war">WAR GAME</article>
+      <section class="buttons">
         <section class="card-stack">
           <article class="background"></article>
           <article class="background"></article>
@@ -19,18 +20,35 @@
           <article class="background"></article>
           <article class="background"></article>
         </section>
-        <div class="btn-group">
+        <section class="btn-group">
           <button class="button deal">Deal Cards</button>
           <button class="button play" disabled>Play</button>
+        </section>
+      </section>
+    </section>
+    <section class="playground">
+      <article class="player1"></article>
+      <article class="table">
+        <div class="temp">
+          <div id="temp-stack"></div>
+          <div id="temp-stack"></div>
+          <div id="temp-stack"></div>
+          <div id="temp-stack"></div>
+          <div id="temp-stack"></div>
+          <div id="temp-stack"></div>
         </div>
-      </div>
+        <div class="plays">
+          <div id="card-one"></div>
+          <div id="card-two"></div>
+        </div>
+      </article>
+      <article class="player2"></article>
     </section>
   </body>
 
   <audio
     class="audio"
     controls
-    autoplay
     loop
     src="Game of Thrones - Main Theme __ Jacob's Piano [Cb-zYw4tVQ4].mp3"
   ></audio>

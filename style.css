@@ -1,0 +1,230 @@
+.body{
+    margin:0 auto;
+}
+
+.board{
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 2%;
+    background-color: rgb(39, 55, 30);  
+    width:100%;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.board > *{
+    width:80%;
+    margin:2.5%;
+}
+
+.board *{
+    box-sizing: border-box;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
+.black{
+    color: rgb(0,0,0);
+}
+
+.red{
+    color: rgb(209, 47, 19);
+}
+
+.card{
+    margin: 0.2%;
+    width: 150px;
+    max-width: 150px;
+    height: 230px;
+    max-height: 230px;
+    border: 0.5px solid transparent;
+    border-radius: 10px;
+    background-image: url('img sources/card-front-design.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.backgroundcard{
+    margin: 0.2%;
+    width: 150px;
+    max-width: 150px;
+    height: 230px;
+    max-height: 230px;
+    border: 0.5px solid lightgray;
+    border-radius: 10px;
+    background-image: url('img sources/card-background-design.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.row1{
+    height: 20%;
+    width: 100%;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.row2{
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+}
+
+.row1.fig{
+    height: 5%;
+    width: 100%;
+}
+
+.row1.fig.top.black{
+    height: 5%;
+    width: 100%;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.row1.fig.top.red{
+    height: 5%;
+    width: 100%;
+    border-bottom: 2px solid rgb(209, 47, 19);
+}
+
+.row1.fig.bottom.black{
+    height: 5%;
+    width: 100%;
+    border-top: 2px solid rgb(0, 0, 0);
+}
+
+.row1.fig.bottom.red{
+    height: 5%;
+    width: 100%;
+    border-top: 2px solid rgb(209, 47, 19);
+}
+
+.row2.fig{
+    height: 80%;
+    justify-content: flex-end;
+}
+
+.semicolumn.black{
+    width: 50%;
+    flex-direction: column;
+    height: 92.7%;
+    border-left: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 10px;
+}
+
+.semicolumn.red{
+    width: 50%;
+    flex-direction: column;
+    height: 92.7%;
+    border-left: 2px solid rgb(209, 47, 19);
+    border-bottom: 2px solid rgb(209, 47, 19);
+    border-bottom-left-radius: 10px;
+}
+
+.corner{
+    align-items:flex-end;
+    justify-content: center;
+    width: 100%;
+}
+
+.center{
+    align-content: center;
+    justify-content: center;
+}
+
+
+.suit{
+    justify-content: center;
+}
+
+
+.insideimgsuit{
+    height: 80%;
+    width: 80%;
+    max-width: 80%;
+    max-height: 8%0%;
+}
+
+.rotateimgsuit{
+    rotate:180deg
+}
+
+.cornerimgsuit{
+    height:43%;
+    width: 43%;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.column{
+    width:20%
+}
+
+.column.two.fig{
+    width: 60%;
+    flex-direction: row;
+    height: 100%;
+}
+
+
+.middlerow1{
+    align-content: flex-start;
+}
+
+.middlerow2{
+    align-content: flex-end;
+}
+
+.five{
+    flex-direction: column;
+    rotate: 180deg;
+}
+
+.three, .two, .four{
+    align-items: center;
+}
+
+.justify{
+    align-content: center;
+}
+
+.figurespace{
+    height: 50%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.mainfig{
+    height: 99.5%;
+    width: 75%;
+}
+
+.jon{
+    width:86%
+}
+
+.khaleesi{
+    width: 80%;
+    transform: scaleX(-1);
+}
+
+.figure{
+    width: 26%;
+    height: 26%;
+}
+
+.figureimg{
+    width: 100%;
+    height:100%;
+}

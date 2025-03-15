@@ -70,6 +70,9 @@ font-size: 100px;
   width: 100%;
 }
 
+.btn-group .button:last-child{
+  border-top:none;
+}
 
 .btn-group .button:hover {
   background-color:rgb(170, 171, 145);
@@ -125,12 +128,12 @@ font-size: 100px;
 }
 
 .playground > * {
-  border: 0.5px solid lightgoldenrodyellow;
   display: flex;
 }
 
 .player1, .player2 {
   flex-basis: 30%;
+  border: 0.5px solid lightgoldenrodyellow;
 }
 
 .table{
@@ -154,7 +157,7 @@ background-size: cover;
 background-position: center;
 border-radius: 10px;
 position: absolute;
-right: 46.5%;
+right: 45%;
 }
 
 #temp-stack:nth-child(1) { transform:  translateX(40px) translateY(0px) rotate(-8deg);}

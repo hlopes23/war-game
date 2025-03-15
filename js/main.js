@@ -1,22 +1,5 @@
 // CREATE DECK ()
 const generateDeck = () => {
-  const suits = ["hearts", "diamonds", "spades", "clubs"];
-
-  const values = [
-    "A",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "J",
-    "Q",
-    "K",
-  ];
 
   for (let suit of suits) {
     //for (let value of values) {
@@ -39,7 +22,7 @@ const shuffleDeck = (deck) => {
 // DEAL CARDS ()
 const dealCards = () => {
   if(deck.length===0)
-    generateDeck();
+  generateDeck();
   shuffleDeck(deck);
   const half = Math.floor(deck.length / 2);
   deck1 = deck.slice(0, half);
@@ -92,6 +75,26 @@ let deck1 = [];
 let deck2 = [];
 let deck = [];
 
+let suits = ["hearts", "diamonds", "spades", "clubs"];
+
+let values = [
+  "A",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "J",
+  "Q",
+  "K",
+];
+
+
+
 
 // DEAL CARDS BUTTON
 document.querySelector(".deal").addEventListener("click", () => {
@@ -100,6 +103,9 @@ document.querySelector(".deal").addEventListener("click", () => {
   console.table(deck1); 
    console.table( deck2);
 });
+
+
+
 
 // PLAY BUTTON
 document.querySelector(".play").addEventListener("click", () => {
@@ -122,3 +128,9 @@ document.querySelector(".play").addEventListener("click", () => {
     alert("Player 1 wins.");
   }
 });
+
+
+
+
+
+

@@ -1,3 +1,4 @@
+
 // CREATE DECK ()
 const generateDeck = () => {
 
@@ -3132,4 +3133,3 @@ function createCard(card, player) {
 
   document.querySelector(`.player${player}-cards`).appendChild(cardElement);
 }
-

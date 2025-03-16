@@ -431,6 +431,9 @@ padding: 10%;
     }
 
 
+#card-one, #card-two{
+    display: none;
+}
 
 #equal-one{
     display: flex;

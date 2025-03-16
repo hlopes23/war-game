@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/gamestyle.css" />
     <link rel="stylesheet" href="css/style.css"/>
     <script src="./js/main.js" defer></script>
 
@@ -13,7 +12,7 @@
     <section class="menu">
       <article class="war">WAR GAME</article>
       <section class="buttons">
-        <section class="card-stack">
+        <section id="card-stack" class="card-stack">
           <article class="background"></article>
           <article class="background"></article>
           <article class="background"></article>
@@ -27,22 +26,22 @@
       </section>
     </section>
     <section class="playground">
-      <article class="player1"></article>
-      <article class="table">
-        <div class="temp">
-          <div id="temp-stack"></div>
-          <div id="temp-stack"></div>
-          <div id="temp-stack"></div>
-          <div id="temp-stack"></div>
-          <div id="temp-stack"></div>
-          <div id="temp-stack"></div>
-        </div>
-        <div class="plays">
-          <div id="card-one" class="card"></div>
-          <div id="card-two" class="card"></div>
-        </div>
-      </article>
-      <article class="player2"></article>
+      <section class="player1">
+        <section id="deck-one" class="deck-one">
+        </section>
+      </section>
+      <section class="table">
+        <section id= "temp" class="temp">
+        </section>
+        <section id="plays" class="plays">
+        <article id="card-one"></article>
+        <article id="card-two"></article>
+        </section>
+      </section>
+      <section class="player2">
+        <section id="deck-two" class="deck-two">
+        </section>
+      </section>
     </section>
   </body>
 

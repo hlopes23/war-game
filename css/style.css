@@ -410,10 +410,6 @@ right: 45%;
   padding-top: 20%;
 }
 
-.plays > *{
-  display: flex;
-}
-
 
 
 .deck-one{
@@ -435,20 +431,6 @@ padding: 10%;
     }
 
 
-#card-one, #card-two{
-  display: none;
-  margin: 0.2%;
-  width: 150px; 
-  max-width: 150px;
-  height: 230px;
-  max-height: 230px;
-  border: 0.5px solid transparent;
-  border-radius: 10px;
-  background-image: url('../img sources/card-front-design.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 #equal-one{
     display: flex;

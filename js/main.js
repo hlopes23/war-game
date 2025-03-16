@@ -75,6 +75,7 @@ const drawTempStak = (card1, card2) =>{
 
 
 // DRAW CARDS IN TABLE
+
 const drawCards = (card1, card2) => {
 
   let cardOne = document.getElementById('card-one');
@@ -85,8 +86,6 @@ const drawCards = (card1, card2) => {
   cardTwo.innerHTML = card2.body;
   cardTwo.style.display="flex";
 }
-
-
 
 // PLAY ()
 const play = () => {
@@ -150,32 +149,32 @@ let tempDeck;
 let suits = ["hearts", "diamonds", "spades", "clubs"];
 
 let elements = [{value: 1, text: 'A', body: [
-  `<div class="column one">
-    <div class="row1">
-      <div class="topleft corner">A</div>
-      <div class="suit">
-        <img class="cornerimgsuit" src="/img sources/spades.png" />
-      </div>
-    </div>
-    <div class="row2"></div>
-  </div>
-  <div class="column two fig">
-    <div class="row2">
-      <div class="center">
-        <img class="centerimgsuit" src="/img sources/spades.png" />
-      </div>
-    </div>
-  </div>
-  <div class="column five">
-    <div class="row1">
-      <div class="bottomright corner">A</div>
-      <div class="suit">
-        <img class="cornerimgsuit" src="/img sources/spades.png" />
-      </div>
-    </div>
-    <div class="row2"></div>
-    <div class="row1"></div>
-  </div>`, `<div class="column one">
+          `<div class="column one">
+            <div class="row1">
+              <div class="topleft corner">A</div>
+              <div class="suit">
+                <img class="cornerimgsuit" src="/img sources/spades.png" />
+              </div>
+            </div>
+            <div class="row2"></div>
+          </div>
+          <div class="column two fig">
+            <div class="row2">
+              <div class="center">
+                <img class="centerimgsuit" src="/img sources/spades.png" />
+              </div>
+            </div>
+          </div>
+          <div class="column five">
+            <div class="row1">
+              <div class="bottomright corner">A</div>
+              <div class="suit">
+                <img class="cornerimgsuit" src="/img sources/spades.png" />
+              </div>
+            </div>
+            <div class="row2"></div>
+            <div class="row1"></div>
+          </div>`, `<div class="column one">
             <div class="row1">
               <div class="topleft corner">A</div>
               <div class="suit">
@@ -865,7 +864,7 @@ let elements = [{value: 1, text: 'A', body: [
             <div class="row2"></div>
           </div>`, `<div class="column one">
             <div class="row1">
-              <div class="topleft corner">4</div>
+              <div class="topleft corner">5</div>
               <div class="suit">
                 <img class="cornerimgsuit" src="/img sources/clubs.png" />
               </div>
@@ -888,7 +887,15 @@ let elements = [{value: 1, text: 'A', body: [
               </div>
             </div>
           </div>
-          <div class="column three"></div>
+          <div class="column three">
+            <div class="row1"></div>
+            <div class="row1">
+              <div class="suit">
+                <img class="insideimgsuit" src="/img sources/clubs.png" />
+              </div>
+            </div>
+            <div class="row1"></div>
+          </div>
           <div class="column four">
             <div class="row1">
               <div class="suit">
@@ -907,7 +914,7 @@ let elements = [{value: 1, text: 'A', body: [
           </div>
           <div class="column five">
             <div class="row1">
-              <div class="bottomright corner">4</div>
+              <div class="bottomright corner">5</div>
               <div class="suit">
                 <img class="cornerimgsuit" src="/img sources/clubs.png" />
               </div>
@@ -2982,5 +2989,147 @@ document.querySelector(".play").addEventListener("click", () => {
 
 
 
+function createCard(card, player) {
+  const cardElement = document.createElement("article");
+  cardElement.className = `card ${card.value} ${card.suit} ${
+    card.suit === "hearts" || card.suit === "diamonds" ? "red" : "black"
+  }`;
 
+  // Column One
+  const columnOne = document.createElement("div");
+  columnOne.className = "column one";
+  const rowOne = document.createElement("div");
+  rowOne.className = "row1";
+  const topleft = document.createElement("div");
+  topleft.className = "topleft corner";
+  topleft.textContent = card.displayValue;
+  const suit = document.createElement("div");
+  suit.className = "suit";
+  const suitImg = document.createElement("img");
+  suitImg.className = "cornerimgsuit";
+  suitImg.src = `/img sources/${card.suit}.png`;
+  suit.appendChild(suitImg);
+  rowOne.appendChild(topleft);
+  rowOne.appendChild(suit);
+  columnOne.appendChild(rowOne);
+  const rowTwo = document.createElement("div");
+  rowTwo.className = "row2";
+  columnOne.appendChild(rowTwo);
+  cardElement.appendChild(columnOne);
+
+  // Column Two (Figure or Center Suit)
+  const columnTwo = document.createElement("div");
+  columnTwo.className = `column two ${
+    card.displayValue === "J" ||
+    card.displayValue === "Q" ||
+    card.displayValue === "K"
+      ? "fig"
+      : ""
+  }`;
+  if (
+    card.displayValue === "J" ||
+    card.displayValue === "Q" ||
+    card.displayValue === "K"
+  ) {
+    // Figure Card
+    const rowTop = document.createElement("div");
+    rowTop.className = "row1 fig top black";
+    columnTwo.appendChild(rowTop);
+    const rowMiddle = document.createElement("div");
+    rowMiddle.className = "row2 fig";
+    const figurespace1 = document.createElement("div");
+    figurespace1.className = "figurespace";
+    const figure1 = document.createElement("div");
+    figure1.className = "figure";
+    const figureImg1 = document.createElement("img");
+    figureImg1.className = "figureimg";
+    figureImg1.src = `/img sources/${card.suit}.png`;
+    figure1.appendChild(figureImg1);
+    figurespace1.appendChild(figure1);
+    const mainFig1 = document.createElement("img");
+    mainFig1.className = `mainfig ${
+      card.displayValue === "J"
+        ? "tyrion"
+        : card.displayValue === "Q"
+        ? "khaleesi"
+        : "jon"
+    }`;
+    mainFig1.src = `/img sources/${
+      card.displayValue === "J"
+        ? "jacket-tyrion.png"
+        : card.displayValue === "Q"
+        ? "queen-khaleesi.png"
+        : "king-jonsnow.png"
+    }`;
+    figurespace1.appendChild(mainFig1);
+    rowMiddle.appendChild(figurespace1);
+    const figurespace2 = document.createElement("div");
+    figurespace2.className = "figurespace rotateimgsuit";
+    const figure2 = document.createElement("div");
+    figure2.className = "figure";
+    const figureImg2 = document.createElement("img");
+    figureImg2.className = "figureimg";
+    figureImg2.src = `/img sources/${card.suit}.png`;
+    figure2.appendChild(figureImg2);
+    figurespace2.appendChild(figure2);
+    const mainFig2 = document.createElement("img");
+    mainFig2.className = `mainfig ${
+      card.displayValue === "J"
+        ? "tyrion"
+        : card.displayValue === "Q"
+        ? "khaleesi"
+        : "jon"
+    }`;
+    mainFig2.src = `/img sources/${
+      card.displayValue === "J"
+        ? "jacket-tyrion.png"
+        : card.displayValue === "Q"
+        ? "queen-khaleesi.png"
+        : "king-jonsnow.png"
+    }`;
+    figurespace2.appendChild(mainFig2);
+    rowMiddle.appendChild(figurespace2);
+    columnTwo.appendChild(rowMiddle);
+    const rowBottom = document.createElement("div");
+    rowBottom.className = "row1 fig bottom black";
+    columnTwo.appendChild(rowBottom);
+  } else if (card.displayValue === "A") {
+    // Ace Card
+    const rowCenter = document.createElement("div");
+    rowCenter.className = "row2";
+    const centerDiv = document.createElement("div");
+    centerDiv.className = "center";
+    const centerImg = document.createElement("img");
+    centerImg.className = "centerimgsuit";
+    centerImg.src = `/img sources/${card.suit}.png`;
+    centerDiv.appendChild(centerImg);
+    rowCenter.appendChild(centerDiv);
+    columnTwo.appendChild(rowCenter);
+  }
+  cardElement.appendChild(columnTwo);
+
+  // Column Five
+  const columnFive = document.createElement("div");
+  columnFive.className = "column five";
+  const rowOneBottom = document.createElement("div");
+  rowOneBottom.className = "row1";
+  const bottomright = document.createElement("div");
+  bottomright.className = "bottomright corner";
+  bottomright.textContent = card.displayValue;
+  const suitBottom = document.createElement("div");
+  suitBottom.className = "suit";
+  const suitImgBottom = document.createElement("img");
+  suitImgBottom.className = "cornerimgsuit";
+  suitImgBottom.src = `/img sources/${card.suit}.png`;
+  suitBottom.appendChild(suitImgBottom);
+  rowOneBottom.appendChild(bottomright);
+  rowOneBottom.appendChild(suitBottom);
+  columnFive.appendChild(rowOneBottom);
+  const rowTwoBottom = document.createElement("div");
+  rowTwoBottom.className = "row2";
+  columnFive.appendChild(rowTwoBottom);
+  cardElement.appendChild(columnFive);
+
+  document.querySelector(`.player${player}-cards`).appendChild(cardElement);
+}
 

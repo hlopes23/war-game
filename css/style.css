@@ -326,7 +326,9 @@ font-size: 100px;
     background-size: cover;
     background-position: center;
     position: absolute;
+    animation: dealcards 1s ease-out;
 }
+
 
 .background:nth-child(1) { transform:  translateX(20px); }
 .background:nth-child(2) { transform:  translateX(15px); }
@@ -399,6 +401,8 @@ right: 45%;
 .temp-stack:nth-child(4) { transform:  translateX(-15px) translateY(0px) rotate(0deg);}
 .temp-stack:nth-child(5) { transform:  translateX(0px) translateY(0px) rotate(8deg);}
 .temp-stack:nth-child(6) { transform:  translateX(-10px) translateY(0px) rotate(-5deg);}
+
+
 
 
 .plays{
